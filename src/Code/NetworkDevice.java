@@ -14,20 +14,20 @@ public class NetworkDevice {
     static int numOfDevices = 0;
 
   public  NetworkDevice() {
-        deviceName = "router";
-        ipAddress = "192.168.1.0";
-        location = "main campus";
-        status = "active";
+//        deviceName = "router";
+//        ipAddress = "192.168.1.0";
+//        location = "main campus";
+//        status = "active";
+//        numOfDevices++;
 
-        numOfDevices++;
+        this("router" ,"192.168.1.0","main campus" , "active" );
     }
 
-   public NetworkDevice(String name, String ip,
-                  String loc, String sts) {
-        deviceName = name;
-        ipAddress = ip;
-        location = loc;
-        status = sts;
+    public NetworkDevice(String deviceName, String ipAddress, String location, String status) {
+        this.deviceName = deviceName;
+        this.ipAddress = ipAddress;
+        this.location = location;
+        this.status = status;
 
         numOfDevices++;
     }
@@ -68,6 +68,7 @@ public class NetworkDevice {
     //methods  -- instance methods
     void connect() {
         System.out.println(deviceName + " connected successfully!");
+        this.display();
     }
 
     void restart() {
@@ -89,5 +90,11 @@ public class NetworkDevice {
     static void displayNetworkInfo() {
         System.out.println("Network name: " + networkName);
         System.out.println("Total devices: " + numOfDevices);
+    }
+
+
+    static void main() {
+        NetworkDevice router1 = new NetworkDevice();
+        router1.connect();
     }
 }
