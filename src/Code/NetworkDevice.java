@@ -7,21 +7,21 @@ public class NetworkDevice {
     private String location;
     private String status;
 
-    protected static int num ;
+    protected static int num;
 
     //shared all objects
     static String networkName = "Campus 3 Network";
     static int numOfDevices = 0;
 
-  public  NetworkDevice() {
+    public NetworkDevice() {
 //        deviceName = "router";
 //        ipAddress = "192.168.1.0";
 //        location = "main campus";
 //        status = "active";
 //        numOfDevices++;
-
-        this("router" ,"192.168.1.0","main campus" , "active" );
+        this("router", "192.168.1.0", "main campus", "active");
     }
+
 
     public NetworkDevice(String deviceName, String ipAddress, String location, String status) {
         this.deviceName = deviceName;
@@ -75,7 +75,7 @@ public class NetworkDevice {
         System.out.println(deviceName + " is restarting....");
     }
 
-   public void display() { //instance method
+    public void display() { //instance method
         System.out.println("Device Name: " + deviceName);
         System.out.println("ip Address: " + ipAddress);
         System.out.println("location: " + location);
