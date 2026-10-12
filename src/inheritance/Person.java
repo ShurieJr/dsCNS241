@@ -5,16 +5,20 @@ public class Person {
     private String tel;
     private int age;
 
+    protected String address;
+
     public Person() {
         name = "Abdullahi ali";
         tel = "+888";
         age = 39;
+        System.out.println("Person no-arg constructor");
     }
 
     public Person(String name, String tel, int age) {
         this.name = name;
         this.tel = tel;
         this.age = age;
+        System.out.println("Person param constructor");
     }
 
     public String getName() {
@@ -41,9 +45,11 @@ public class Person {
         this.age = age;
     }
 
-    void display(){
+     public void display() {
         System.out.println(name);
         System.out.println(tel);
         System.out.println(age);
     }
+
+
 }
